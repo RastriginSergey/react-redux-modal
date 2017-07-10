@@ -17,10 +17,10 @@ export default createReducer(initialSate, {
     return state.set('modals', state.get('modals').concat(fromJS([{
       id: uiid.v1(),
       ...payload
-    }])))
+    }])));
   },
   [REMOVE_MODAL]: (state, id) => {
-    return state.set('modals', state.get('modals').filter(modal => modal.get('id') !== id))
+    return state.set('modals', state.get('modals').filter(modal => modal.get('id') !== id));
   },
   [CLEAR_ALL]: () => {
     return fromJS({
